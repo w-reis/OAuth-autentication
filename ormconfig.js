@@ -1,10 +1,10 @@
-import config from './src/config';
+const config = require('./src/config')
 
-export default {
-  "type": config.db.type,
-  "host": config.db.host,
-  "port": config.db.port,
-  "username": config.db.username,
-  "password": config.db.password,
-  "database": config.db.database,
+module.exports = {
+  "type": config.default.db.type,
+  "host": config.default.db.host,
+  "port": config.default.db.port,
+  "username": config.default.db.username,
+  "password": config.default.db.password,
+  "database": config.default.db.database,
 }

@@ -1,10 +1,8 @@
 import 'reflect-metadata';
 
 import express from 'express';
-
 import config from './config';
-
-require('dotenv/config');
+import './database';
 
 const app = express();
 
