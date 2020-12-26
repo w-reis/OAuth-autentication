@@ -7,4 +7,10 @@ module.exports = {
   "username": config.default.db.username,
   "password": config.default.db.password,
   "database": config.default.db.database,
+  "migrations": [
+    "./src/database/migrations/*.ts"
+  ],
+  "cli": {
+    "migrationsDir": "./src/database/migrations "
+  }
 }
