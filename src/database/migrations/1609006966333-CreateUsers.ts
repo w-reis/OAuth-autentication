@@ -10,6 +10,11 @@ export default class CreateUsers1609006966333 implements MigrationInterface {
             name: 'id',
             type: 'varchar',
             isPrimary: true,
+            generationStrategy: 'uuid',
+          },
+          {
+            name: 'auth_provider_id',
+            type: 'varchar',
             isNullable: false,
           },
           {
