@@ -2,14 +2,14 @@ import 'reflect-metadata';
 
 import express from 'express';
 import config from './config';
+import routes from './routes';
+import './services/auth';
 import './database';
 
 const app = express();
 
-app.get('/', (request, response) => {
-  response.json({ message: 'Hello FinApp' });
-});
+app.use(routes);
 
 app.listen(config.app.port, () => {
-  console.log('Server is started at http://localhost:3333');
+  console.log('Server is started on http://localhost:3333');
 });
