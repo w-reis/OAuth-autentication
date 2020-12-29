@@ -14,4 +14,10 @@ export default {
   app: {
     port: process.env.PORT || 3333,
   },
+  auth: {
+    google: {
+      clientID: process.env.GOOGLE_CLIENT_ID || '',
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET || '',
+    },
+  },
 };
