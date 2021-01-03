@@ -1,1 +1,17 @@
-<h1>Home</h1>
+{% extends "layout.njk" %}
+
+{% block head %}
+  <link rel="stylesheet" href="/styles/index.css" />
+{% endblock head %}
+
+{% block content %}
+  <div class="painel">
+    <h1>OAuth</h1>
+    <div class="painel-body">
+      <h4>Sign in with:</h4>
+      <a class="auth-button google-button" href="auth/google">Google</a>
+      <a class="auth-button facebook-button" href="#">Facebook</a>
+      <a class="auth-button github-button" href="#">GitHub</a>
+    </div>
+  </div>
+{% endblock content %}
