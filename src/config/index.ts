@@ -20,4 +20,7 @@ export default {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET || '',
     },
   },
+  session: {
+    cookieKey: process.env.COOKIE_KEY || '',
+  },
 };
