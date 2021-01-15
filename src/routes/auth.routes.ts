@@ -16,6 +16,9 @@ authRouter.get(
   '/google/redirect',
   passport.authenticate('google'),
   (request, response) => {
+    if (request.session) {
+      request.session.user = request.user;
+    }
     response.redirect('/user/profile/');
   }
 );

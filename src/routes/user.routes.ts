@@ -3,7 +3,10 @@ import { Router } from 'express';
 const userRouter = Router();
 
 userRouter.get('/profile', (request, response) => {
-  response.render('profile');
+  if (request.session) {
+    const { user } = request.session;
+    response.render('profile', { user });
+  }
 });
 
 export default userRouter;
